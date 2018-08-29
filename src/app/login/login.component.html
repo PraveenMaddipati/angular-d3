@@ -1,0 +1,27 @@
+<div class="container-fluid bg">
+  <div class="row">
+    <div class="col-md-4 col-sm-4 cpl-xs-12"><span><img src="assets/images/santander-logo.png" style="width: 325px;margin-top: 185px;    margin-left: 230px;"></span></div>
+    <div class="col-md-4 col-sm-4 cpl-xs-12" style="margin-left: 260px; margin-top: -60px">
+      <form class="form-container" [formGroup]="elegantForm" (ngSubmit)="addpost(elegantForm.value)">
+          <span><img src="assets/images/360-logo.jpg" style="width: 200px;"></span>
+        <div class="form-group">
+          <label for="exampleInputEmail1">User Id:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter User ID" formControlName="username">
+        </div>
+        <div class="alert" *ngIf="!elegantForm.controls['username'].valid && elegantForm.controls['username'].touched">enter username</div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" formControlName="password">
+        </div>
+        <div class="alert" *ngIf="!elegantForm.controls['password'].valid && elegantForm.controls['password'].touched">Enter password</div>
+        
+        <button type="submit" class="btn ab" [disabled]="!elegantForm.valid">
+          <span class="glyphicon glyphicon-log-in"></span> Log in
+        </button>
+        <span><a href="#" style="margin-left: 70px; text-decoration: none;" >Forgot password?</a></span> 
+      </form>
+    </div>
+    <div class="col-md-4 col-sm-4 cpl-xs-12"></div>
+  </div>
+</div>
+

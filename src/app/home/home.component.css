@@ -1,0 +1,96 @@
+
+/* Create three unequal columns that floats next to each other */
+ .column {
+    float: left;
+    padding: 25px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+}
+
+.left {
+  width: 20%;
+  border-right: 3px solid skyblue;
+}
+
+.right {
+    width: 30%;
+    z-index: 5;
+    /* border-left: 3px solid skyblue; */
+}
+
+.middle {
+  width: 50%;
+  border-right: 3px solid skyblue;
+} 
+
+/* Clear floats after the columns */
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    margin-right: 0px;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .content {
+      padding:20px;
+    }  
+
+.searchForm {
+    width: 500px;
+    margin: 30px;
+    width: 370px;
+    background-color: black;
+    padding: 20px;
+    height: 65px;
+    border-bottom-left-radius: 40px;
+    -moz-box-shadow:-8px 8px 20px -6px #000;
+    -webkit-box-shadow: -8px 8px 20px -6px #000;
+    box-shadow: -8px 8px 20px -6px #000;
+    /* -moz-border-radius-bottomleft: 40px;
+     */
+} 
+
+ .searchTerm:focus {
+    /* width: 175px; */
+    background-color: #fff;
+    color: #000;
+    opacity: 1;
+    -webkit-box-shadow: 1px 1px 9px rgba(0,0,0,0.85);
+    -moz-box-shadow: 1px 1px 9px rgba(0,0,0,0.85);
+    box-shadow:  1px 1px 9px rgba(0,0,0,0.85);
+    font-weight: 800; 
+} 
+
+.searchTerm {
+    padding: 5px 10px;
+    margin-left: 15px;
+    border: 0;
+    width: 250px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 0px;
+    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.65);
+    -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.65);
+    box-shadow:  1px 1px 5px rgba(0,0,0,0.65);
+    outline: 0;
+
+}
+
+span {
+    font-size: 15px;
+}
+
+.btn {
+    border-radius: 0px;
+    height: 30px;
+    margin-top: -3px;
+}

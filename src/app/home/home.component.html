@@ -1,0 +1,54 @@
+<!-- <div class="searchForm">
+<input class="searchTerm" [(ngModel)]="searchText" placeholder="Search...."> 
+</div>
+ -->
+
+
+ <nav class="navbar navbar-default" style="background-color: red">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="assets/images/santander-logo.png" style="margin-top: -15px; height: 50px; margin-left: -15px;width: 235px"></a>
+        <img src="assets/images/360-logo.jpg" style="height: 50px;margin-left: 340px;width: 90px">
+      </div>
+    </div>
+  </nav>
+
+<form class="searchForm" [formGroup]="elegantForm" (ngSubmit)="getProjects(elegantForm.value)">
+    <input class="searchTerm" placeholder="search...." autocomplete="off" formControlName="searchText"/>
+    <button type="submit" class="btn"><span>GO</span></button>
+</form>
+<div class="row">
+    <div  class="column left">
+      <div class="header">ControlM Jobs List</div><br>
+      <p><strong>select the job from list to show graph</strong></p>
+      <div *ngIf="characters" class="content">
+      <ul style="border: 2px solid orangered">
+          <li *ngFor="let c of characters.nodes" (click)="toggleChild()" style="cursor: pointer">
+      {{c.id}}
+        </ul>
+      </div>
+    </div>
+    <div class="column middle">
+        <div class="header">Graphical View of Hadoop jobs</div>
+        <div class="content" style="margin-left: -38px;">
+          <graph [nodes]="nodes" [links]="links"></graph>
+        </div>
+    </div>
+    <div class="column right" >
+        <div class="header">Job properties</div>
+        <div >
+          <span><strong>Job name:</strong> </span>{{selectedJob.Name}}<br>
+           <span><strong>Description:</strong></span>{{selectedJob.ID}}<br>
+          <span><strong>Business Application:</strong> </span>{{selectedJob.ID}}<br>
+          <span><strong>Database:</strong> </span>{{selectedJob.Type}}<br>
+          <span><strong>Table:</strong> </span>{{selectedJob.Name}}<br>
+          <span><strong>Project:</strong> </span>{{selectedJob.Name}}<br>
+          <span><strong>Execution Time: </strong></span>{{selectedJob.Name}}<br>
+          <span><strong>Execution Frequency:</strong> </span>{{selectedJob.Name}}<br>
+          <span><strong>Operation Field:</strong> </span>{{selectedJob.Name}}<br>
+          <span><strong>Job Category:</strong> </span>{{selectedJob.Name}}<br>
+          <span><strong>Requestor:</strong> </span>{{selectedJob.Name}}<br>
+          <span><strong>Support Contact:</strong> </span>{{selectedJob.Name}}<br>
+          <span><strong>Additional Information:</strong> </span>{{selectedJob.Name}}
+    </div>
+  </div>
